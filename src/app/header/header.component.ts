@@ -30,17 +30,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  signUp(){
-    let details = this.getDetails()
-    if(details) {
-      return true
-    } else {
-      false
-    }
-  }
+ 
+  
 
   
   logout(){
+    localStorage.removeItem('users');
     this.route.navigate(['/login'])
   }
 }
